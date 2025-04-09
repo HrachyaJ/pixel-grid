@@ -44,6 +44,17 @@ app.post('/api/pixel', (req, res) => {
     res.json({ grid, updated: { row, col, color } });
 });
 
+const corsOptions = {
+  origin: [
+    'https://pixel-grid-beige.vercel.app/', // Your Vercel frontend URL
+    'http://localhost:3000'             // For local testing
+  ],
+  optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
+
+
 // Start server
 app.listen(PORT, () => {
     console.log(`Pixel Grid server running on http://localhost:${PORT}`);
