@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000';
+const API_URL = 'http://localhost:3000/api';
 let selectedColor = '#000000';
 let isMouseDown = false;
 
